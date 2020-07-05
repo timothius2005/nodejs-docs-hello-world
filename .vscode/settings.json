@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/e18f856b-34dd-452a-8dd1-6a6cef78dcbe/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/woodsonco4",
+    "appService.deploySubpath": "."
+}
