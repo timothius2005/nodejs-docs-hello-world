@@ -1,11 +1,19 @@
-const http = require('http');
+console.log('Console log messge')
 
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Woodson & Co. Established 2020");
-});
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const morgan = require('morgan')
 
-const port = process.env.PORT || 1338;
-server.listen(port);
+const app = express()
+app.use(morgan('combined'))
+app.use(bodyParser.json())
+app.use(cors())
 
-console.log("Server running at http://localhost:%d", port);
+app.get('/status', (req, res) => {
+    res.send({
+        message: 'Woodson & Co. message!'
+    })
+})
+  
+  app.listen(process.env.PORT || 8082)
