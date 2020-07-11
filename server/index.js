@@ -1,4 +1,4 @@
-console.log('Console log messge')
+console.log('Console log message')
 
 const express = require('express')
 const bodyParser = require('body-parser')
